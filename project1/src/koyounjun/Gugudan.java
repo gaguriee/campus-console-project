@@ -42,4 +42,5 @@ public class Gugudan {
         Gugu gugudan = new Gugu();
         gugudan.printGugudan(dan);
     }
+    
 }
