@@ -1,4 +1,4 @@
-package star;
+package View;
 
 import java.util.Scanner;
 

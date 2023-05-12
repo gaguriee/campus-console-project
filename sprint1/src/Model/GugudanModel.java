@@ -1,4 +1,4 @@
-package GugudanProject;
+package Model;
 
 public class GugudanModel {
     public String getGugudan(int dan) {

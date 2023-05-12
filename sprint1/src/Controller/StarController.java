@@ -1,10 +1,13 @@
-package star;
+package Controller;
 
-public class starController {
+import Model.starModel;
+import View.starView;
+
+public class StarController {
 	private starView view;
 	private boolean exitCheck;
 	
-	public starController(){
+	public StarController(){
 		view = new starView();
 		exitCheck = false;	//사용자가 q 또는 6을 누르면 true로 변하고, 반복문이 종료됨.
 	}	
@@ -14,6 +17,8 @@ public class starController {
 	public void run() {
 		while(!exitCheck) {
 			String shape = view.getUserShape();
+
+
 			switch(shape) {	
 			case "삼각형" : 
 			case "1" : starModel.generateTriangle(); break;

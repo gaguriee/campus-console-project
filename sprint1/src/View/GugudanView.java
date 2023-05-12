@@ -1,4 +1,4 @@
-package GugudanProject;
+package View;
 
 public class GugudanView {
     public void printGugudan(String gugudan) { // 출력만 담당

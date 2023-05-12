@@ -1,4 +1,7 @@
-package GugudanProject;
+package Controller;
+
+import Model.GugudanModel;
+import View.GugudanView;
 
 public class GugudanController {
     int dan;

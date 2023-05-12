@@ -1,4 +1,4 @@
-package Calculator;
+package Model;
 
 public class CalculatorModel {
     String userInputCalculation;

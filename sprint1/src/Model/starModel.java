@@ -1,4 +1,4 @@
-package star;
+package Model;
 
 public class starModel {
 	
