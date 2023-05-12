@@ -38,7 +38,7 @@ public class CalculatorModel {
         operand1 = Integer.parseInt(userInputCalculation.substring(0, (operatorPosition - 1)));
         operand2 = Integer.parseInt(userInputCalculation.substring((operatorPosition + 2)));
 
-        if (operator == '+') { // 연산 후 결과값 리턴
+        if (operator == '+') { // 연산 후 결과값 리턴 //이거보다 비교할게 많으면 switch case문 활용 가능
             return operand1 + operand2;
         } else if (operator == '-') {
             return operand1 - operand2;
