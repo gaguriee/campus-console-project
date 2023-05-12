@@ -1,7 +1,7 @@
 package GugudanProject;
 
 public class GugudanController {
-    int dan;
+    private int dan;
 
     public GugudanController(int dan) { // 생성자
 
@@ -9,9 +9,11 @@ public class GugudanController {
     }
 
     public void gugudanController() {
+
         GugudanModel gugudanModel = new GugudanModel(); // 모델 객체 생성
         String gugudan = gugudanModel.getGugudan(dan); // gugudan에 getGugudan메서드 리턴 값을 저장
         GugudanView gugudanView = new GugudanView(); // 뷰 객체 생성
-        gugudanView.printGugudan(gugudan); // pringGugudan 메서드에 gugudan매개변수를 넣어줌
+        gugudanView.printGugudan(gugudan); // pringGugudan 메서드에 gugudan매개변수를 넣어
+
     }
 }
