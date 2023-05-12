@@ -1,5 +1,3 @@
-package Controller;
-
 import Model.starModel;
 import View.starView;
 
