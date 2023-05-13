@@ -40,12 +40,9 @@ public class Main {
              * -> project.Controller (연산 결과 전달)
              * -> View  (연산 결과 출력)
              */
-
-            //view에서 static을 이용해 유저에게 메시지를 전달
-            CalculatorView.isInputView();
             //유저에게 입력값 받기
             CalculatorController cc = new CalculatorController();
-            //controller가 model의 연산 결과를 받아서 view에 값 전달
+
             cc.passModelCalculation();
 
 

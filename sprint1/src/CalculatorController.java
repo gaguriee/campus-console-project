@@ -20,6 +20,8 @@ public class CalculatorController {
         //유저에게 입력값을 받음
 
         while(!exitCheck) { //루프형 기능 추가
+            //view에서 static을 이용해 유저에게 메시지를 전달
+            CalculatorView.isInputView(); //메인에서 루프안으로 변경
             this.userInputCalculation = in.nextLine();
             if(userInputCalculation == "q"){
                 cv.isExitView();
