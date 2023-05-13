@@ -1,3 +1,5 @@
+package Controller;
+
 import Model.GugudanModel;
 import View.GugudanView;
 

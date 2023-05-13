@@ -1,7 +1,8 @@
+import Controller.CalculatorController;
+import Controller.GugudanController;
+import Controller.UserInputController;
+import Controller.StarController;
 import View.CalculatorView;
-import View.GugudanView;
-
-import java.util.Scanner;
 
 public class Main {
 
@@ -20,7 +21,7 @@ public class Main {
 
             /**
              * -> Main (정수 선택)
-             * -> project.Controller (정수 전달)
+             * -> Controller (정수 전달)
              * -> Model (결과 리턴)
              * -> View (결과 출력)
              *
@@ -37,9 +38,10 @@ public class Main {
              * -> View (연산자 선택)
              * -> Main (연산자 입력)
              * -> Model (연산)
-             * -> project.Controller (연산 결과 전달)
+             * -> Controller (연산 결과 전달)
              * -> View  (연산 결과 출력)
              */
+
 
             //view에서 static을 이용해 유저에게 메시지를 전달
             CalculatorView.isInputView();
@@ -48,14 +50,13 @@ public class Main {
             //controller가 model의 연산 결과를 받아서 view에 값 전달
             cc.passModelCalculation();
 
-
         }
         else { // StarController
 
             /**
-             * project.Controller
+             * Controller
              * -> View (도형 선택)
-             * -> project.Controller
+             * -> Controller
              * -> Model (도형 리턴)
              * -> View (도형 출력)
              */

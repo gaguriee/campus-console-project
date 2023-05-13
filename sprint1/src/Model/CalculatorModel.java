@@ -33,6 +33,7 @@ public class CalculatorModel {
 //            System.out.println("잘못된 연산자 입니다."); //TODO 오류 처리 해야함
 //        }
 
+
         //indexof 메서드로 연산자의 위치를 알아낸 것을 활용하여
         //substring 메서드로 범위를 지정하여 피연산자 부분 문자열 추출 후
         //Integer 메서드로 int형으로 변환
