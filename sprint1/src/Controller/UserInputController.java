@@ -5,19 +5,22 @@ import java.util.Scanner;
 public class UserInputController {
     private static Scanner scanner = new Scanner(System.in);
 
-    public static String getUserInput() {
-        String input;
+    public static InputType getUserInput() {
+        InputType input;
 
         while (true) {
             System.out.println("Please enter gugudan or calculator or star:");
-            input = scanner.nextLine();
+            String inputString = scanner.nextLine();
 
-            if (input.equals("gugudan") || input.equals("calculator") || input.equals("star")) {
-                return input;
+            try {
+                input = InputType.valueOf(inputString.toUpperCase());
+                break;
+            } catch (IllegalArgumentException e) {
+                System.out.println("Invalid input. Please enter gugudan or calculator or star.");
             }
-
-            System.out.println("Invalid input. Please enter gugudan or calculator or star.");
         }
+
+        return input;
     }
 
 }
