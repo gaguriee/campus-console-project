@@ -4,9 +4,9 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CalculatorView {
-    int result; //Controller에서 받아온 결과값 저장
+    double result; //Controller에서 받아온 결과값 저장
 
-    public CalculatorView(int result) {
+    public CalculatorView(double result) {
         this.result = result;
     }
 
@@ -15,11 +15,8 @@ public class CalculatorView {
         Date date = new Date(System.currentTimeMillis());
         System.out.println("-------------------------------------------------");
 
-        /**
-         * 이것은 로그 메시지입니다는 삭제하셔도 됩니당!
-         */
 
-        System.out.println(formatter.format(date) + "[calculator 실행 중] " + logMessage("이것은 로그 메시지 입니다"));
+        System.out.println(formatter.format(date) + "[calculator 실행 중] ");
 
 
 
@@ -29,11 +26,9 @@ public class CalculatorView {
         System.out.println("-------------------------------------------------"); //여러개 입력시 구별하기위해 추가
     }
 
-    private static String logMessage(String message) {
-        return message;
-    }
 
     public void isOutputView() { //결과값 출력
+
         System.out.println("결과값은 " + result + " 입니다!!!!");
     }
 
