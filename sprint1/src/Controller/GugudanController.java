@@ -5,7 +5,7 @@ import View.GugudanView;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-//import Error.GugudanError;
+
 
 public class GugudanController {
 

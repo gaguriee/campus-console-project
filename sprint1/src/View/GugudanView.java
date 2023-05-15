@@ -1,7 +1,5 @@
 package View;
 
-//import Error.GugudanError;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
