@@ -32,7 +32,7 @@ public class CalculatorView {
         System.out.println("결과값은 " + result + " 입니다!!!!");
     }
 
-    public void isExitView(){
+    public static void isExitView(){ //첫 입력을 q로 하면 NullPointerException이 일어나 static으로 선언
         System.out.println("계산기 프로그램을 종료합니다");
     }
 }
