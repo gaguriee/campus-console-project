@@ -26,12 +26,16 @@ public class GugudanController {
 
         Scanner in = new Scanner(System.in);
 
-        GugudanView.logMessage("이것은 로그 메세지 입니다.");
         GugudanView.printStart();
 
         int dan;
         while (true) {
             try {
+
+                /**
+                 * in.nextInt()로 받게 되면 int형이 입력되지 않았을 때 InputMismatchException이 발생합니다! 핸들링해주세용
+                 */
+
                 dan = in.nextInt();
                 if (dan < 1 || dan > 999) { // 1 ~ 999 사이가 아닐때
                     throw new GugudanError(); // catch 문으로 이동

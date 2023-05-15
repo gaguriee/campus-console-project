@@ -16,7 +16,7 @@ public class StarView {
 	public static void logMessage(String message) {
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
 		Date date = new Date(System.currentTimeMillis());
-		System.out.println(formatter.format(date) + "[구구단 실행 중] " + message);
+		System.out.println(formatter.format(date) + "[별찍기 실행 중] " + message);
 	}
 
 	//사용자에게서 원하는 도형을 입력받음

@@ -14,7 +14,14 @@ public class CalculatorView {
         SimpleDateFormat formatter= new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
         Date date = new Date(System.currentTimeMillis());
         System.out.println("-------------------------------------------------");
+
+        /**
+         * 이것은 로그 메시지입니다는 삭제하셔도 됩니당!
+         */
+
         System.out.println(formatter.format(date) + "[calculator 실행 중] " + logMessage("이것은 로그 메시지 입니다"));
+
+
 
         System.out.println("연산식을 입력해주세요");
         System.out.println("연산자와 피연산자를 띄어쓰기로 구분하는 방식으로 입력해주세용");
