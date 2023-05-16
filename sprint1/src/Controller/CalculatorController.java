@@ -3,6 +3,8 @@ package Controller;
 import Model.CalculatorModel;
 import View.CalculatorView;
 import Error.CalculatorError;
+import View.ExceptionView;
+
 import java.util.Scanner;
 
 public class CalculatorController {
@@ -40,6 +42,8 @@ public class CalculatorController {
                     calculatorView.isOutputView();
                 }catch (CalculatorError e){
                     System.out.println(e.getMessage());
+                }catch (NumberFormatException e){ //1+ 2이런식으로 입력했을때 NumberFormatException발생
+                    ExceptionView.displayException("calculator", e, "잘못된 형식 입력입니다. 입력 양식을 다시 확인해주세요");
                 }
             }
         }
