@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.GugudanModel;
+import View.ExceptionView;
 import View.GugudanView;
 
 import java.util.InputMismatchException;
@@ -32,21 +33,19 @@ public class GugudanController {
         while (true) {
             try {
 
-                /**
-                 * in.nextInt()로 받게 되면 int형이 입력되지 않았을 때 InputMismatchException이 발생합니다! 핸들링해주세용
-                 */
-
                 dan = in.nextInt();
 
+                // TODO : early exit 로 나중에 수정
                 if (dan >= 1 && dan < 999) { // 1 ~ 999 사이일 경우
                     String gugudan = gugudanModel.getGugudan(dan); // gugudan에 getGugudan메서드 리턴 값을 저장
                     gugudanView.printGugudan(gugudan); // pringGugudan 메서드에 gugudan매개변수를 넣어줌
                     break;
                 } else {
+                    GugudanView.printStart();
                     throw new InputMismatchException(); // catch 문으로 이동 입력값의 Type이 다를경우
                 }
             } catch (InputMismatchException e) {
-                GugudanView.displayException("구구단", e); // 에러 문구
+                ExceptionView.displayException("구구단", e, "1 ~ 999사이의 정수만!!! 입력해주세요!!!"); // 에러 문구
                 in.nextLine(); // 에러발생 후 다시 사용자 입력 값 받음
             }
         }

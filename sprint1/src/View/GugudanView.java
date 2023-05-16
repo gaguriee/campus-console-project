@@ -28,15 +28,4 @@ public class GugudanView {
 
     }
 
-    // 에러 메세지 출력
-    public static void displayException(String programName, Exception e) {
-
-        // 예외 발생 시 원하는 출력 방식으로 예외 정보를 표시할 수 있습니다.
-
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
-        Date date = new Date(System.currentTimeMillis());
-        System.out.println(formatter.format(date) + " [" + programName + " 실행 중 에러 발생] " + e.getMessage());
-    }
-
-
 }
