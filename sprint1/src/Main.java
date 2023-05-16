@@ -17,8 +17,8 @@ public class Main {
                 break;
             case CALCULATOR:
                 // calculator 처리 코드
-                CalculatorController cc = new CalculatorController();
-                cc.passModelCalculation();
+                CalculatorController calculatorController = new CalculatorController();
+                calculatorController.passModelCalculation();
                 break;
             case STAR:
                 // star 처리 코드
