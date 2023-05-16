@@ -26,8 +26,8 @@ public class GugudanController {
         GugudanView gugudanView = new GugudanView(); // 뷰 객체 생성
 
         Scanner in = new Scanner(System.in);
-
-        GugudanView.printStart(); // 시작 메세지
+        gugudanView.logMessage(" ");
+        gugudanView.printStart(); // 시작 메세지
 
         int dan;
         while (true) {
@@ -41,7 +41,6 @@ public class GugudanController {
                     gugudanView.printGugudan(gugudan); // pringGugudan 메서드에 gugudan매개변수를 넣어줌
                     break;
                 } else {
-                    GugudanView.printStart();
                     throw new InputMismatchException(); // catch 문으로 이동 입력값의 Type이 다를경우
                 }
             } catch (InputMismatchException e) {

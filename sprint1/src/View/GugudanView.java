@@ -6,7 +6,7 @@ import java.util.Date;
 public class GugudanView {
 
     // 로그 메세지 출력
-    public static void logMessage(String message) {
+    public void logMessage(String message) {
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
         Date date = new Date(System.currentTimeMillis());
@@ -15,7 +15,7 @@ public class GugudanView {
     }
 
     // 시작 메세지 출력
-    public static void printStart() {
+    public void printStart() {
 
         System.out.println("1 ~ 999 사이의 정수를 입력하시오");
 
@@ -23,9 +23,9 @@ public class GugudanView {
 
     // 구구단 출력
     public void printGugudan(String gugudan) {
-
+        System.out.println("____________________________");
         System.out.println(gugudan);
-
+        System.out.println("____________________________");
     }
 
 }
