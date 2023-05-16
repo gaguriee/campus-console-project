@@ -42,8 +42,10 @@ public class CalculatorController {
                     calculatorView.isOutputView();
                 }catch (CalculatorError e){
                     System.out.println(e.getMessage());
-                }catch (NumberFormatException e){ //1+ 2이런식으로 입력했을때 NumberFormatException발생
+                }catch (NumberFormatException e){// 문자열을 숫자로 변환 하려고 할 때 발생하는 예외 (1+ 2)
                     ExceptionView.displayException("calculator", e, "잘못된 형식 입력입니다. 입력 양식을 다시 확인해주세요");
+                }catch (StringIndexOutOfBoundsException e){ //index범위 초과 (연산자가 잘못되었을 때)
+                    ExceptionView.displayException("calculator", e, "잘못된 형식의 입력입니다. 연산자를 정확히 입력해주세용.");
                 }
             }
         }
