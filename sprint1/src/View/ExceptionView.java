@@ -11,7 +11,16 @@ public class ExceptionView {
 
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z");
         Date date = new Date(System.currentTimeMillis());
-        System.out.println(formatter.format(date) + " ["+programName+" 실행 중 에러 발생] " + e.getMessage());
+
+        // some exception's "getMessage" method returns NULL -> null 반환하는 에러는 toString으로 에러 명시
+
+        if (e.getMessage() == null){
+            System.out.println(formatter.format(date) + " ["+programName+" 실행 중 에러 발생] " + e.toString());
+        }
+        else{
+            System.out.println(formatter.format(date) + " ["+programName+" 실행 중 에러 발생] " + e.getMessage());
+        }
+
 
         // 에러 메시지를 직접 넣어줄 수 있음
         System.out.println(errorMessage);
